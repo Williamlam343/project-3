@@ -1,197 +1,96 @@
 const db = require('./connection');
 const { User, Product, Category } = require('../models');
 
+const brands = require("./brands.json");
+
+
+
 db.once('open', async () => {
   await Category.deleteMany();
+  await Product.deleteMany();
+  await User.deleteMany();
 
-  const categories = await Category.insertMany([
+  let brandsID = await Category.insertMany(brands);
+  let productSeed = await Product.insertMany([
     {
-      name:
-        "ASICS"
+      "name": "Nike",
+      "description": "Awesome looking shoes",
+      "image": "cookie-tin.jpg",
+      "category": brandsID[26]._id,
+      "price": 100,
+      "quantity": 25
+    }, {
+      "name": "Adidas",
+      "description": "Awesome looking shoes",
+      "image": "cookie-tin.jpg",
+      "category": brandsID[1]._id,
+      "price": 100,
+      "quantity": 25
     },
     {
-      name:
-        "ADIDAS"
+      "name": "Air Jordans",
+      "description": "Awesome looking shoes",
+      "image": "cookie-tin.jpg",
+      "category": brandsID[2]._id,
+      "price": 100,
+      "quantity": 25
     },
     {
-      name:
-        "AIR JORDAN"
+      "name": "Alexander McQueen",
+      "description": "Awesome looking shoes",
+      "image": "cookie-tin.jpg",
+      "category": brandsID[3]._id,
+      "price": 100,
+      "quantity": 25
     },
     {
-      name:
-        "ALEXANDER MCQUEEN"
+      "name": "Surpreme",
+      "description": "Awesome looking shoes",
+      "image": "cookie-tin.jpg",
+      "category": brandsID[36]._id,
+      "price": 100,
+      "quantity": 25
     },
     {
-      name:
-        "ANTI SOCIAL SOCIAL CLUB"
+      "name": "Yeezy",
+      "description": "Awesome looking shoes",
+      "image": "cookie-tin.jpg",
+      "category": brandsID[43]._id,
+      "price": 100,
+      "quantity": 25
     },
     {
-      name:
-        "BAIT"
-    },
-    {
-      name:
-        "BALENCIAGA"
-    },
-    {
-      name:
-        "BAPE"
-    },
-    {
-      name:
-        "BURBERRY"
-    },
-    {
-      name:
-        "CHANEL"
-    },
-    {
-      name:
-        "COMMON PROJECTS"
-    },
-    {
-      name:
-        "CONVERSE"
-    },
-    {
-      name:
-        "CROCS"
-    },
-    {
-      name:
-        "DIADORA"
-    },
-    {
-      name:
-        "DIOR"
-    },
-    {
-      name:
-        "EWING"
-    },
-    {
-      name:
-        "FOOTWEAR"
-    },
-    {
-      name:
-        "GOLDEN GOOSE"
-    },
-    {
-      name:
-        "GUCCI"
-    },
-    {
-      name:
-        "JORDAN"
-    },
-    {
-      name:
-        "KIDCUDI"
-    },
-    {
-      name:
-        "KANYE WEST"
-    },
-    {
-      name:
-        "LACOSTE"
-    },
-    {
-      name:
-        "LI-NING"
-    },
-    {
-      name:
-        "LOUIS VUITTON"
-    },
-    {
-      name:
-        "NEW BALANCE"
-    },
-    {
-      name:
-        "NIKE"
-    },
-    {
-      name:
-        "OFF-WHITE"
-    },
-    {
-      name:
-        "PALACE"
-    },
-    {
-      name:
-        "PRADA"
-
-    },
-    {
-      name:
-        "PUMA"
-    },
-    {
-      name:
-        "REEBOK"
-    },
-    {
-      name:
-        "STADIUM"
-    },
-    {
-      name:
-        "SAINT LAURENT"
-    },
-    {
-      name:
-        "SAUCONY"
-    },
-    {
-      name:
-        "STADIUM GOODS"
-    },
-    {
-      name:
-        "SUPREME"
-    },
-    {
-      name:
-        "THE WEEKND"
-    },
-    {
-      name:
-        "TIMBERLAND"
-    },
-    {
-      name:
-        "TRAVIS SCOTT"
-    },
-    {
-      name:
-        "UNDER ARMOUR"
-    },
-    {
-      name:
-        "VANS"
-    },
-    {
-      name:
-        "VERSACE"
-    },
-    {
-      name:
-        "YEEZY"
-    },
-    {
-      name:
-        "ZIMMERMANN"
-    },
-
+      "name": "Puma",
+      "description": "Awesome looking shoes",
+      "image": "cookie-tin.jpg",
+      "category": brandsID[30]._id,
+      "price": 100,
+      "quantity": 25
+    }
   ]);
+  console.log(brandsID[0]._id)
 
-  console.log('categories seeded');
+  await User.create({
+    "firstName": "Will",
+    "lastName": "Lam",
+    "email": "apple@gmail.com",
+    "password": "1234asdf"
+  });
+
+  await User.create({
+    firstName: "Test1",
+    lastName: "Test2",
+    email: "test@gmail.com",
+    password: "1234asdf",
+    orders: [{
+      products: [productSeed[0]._id, productSeed[5]._id, productSeed[3]._id]
+    }]
+  });
 
 
 
+
+
+  console.log('db seeded');
   process.exit();
 });
