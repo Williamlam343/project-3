@@ -11,6 +11,14 @@ export const LOGIN = gql`
   }
 `;
 
+export const LOGOUT = gql`
+  mutation logout {
+    logOut {
+      success
+    }
+  }
+  `;
+
 export const ADD_ORDER = gql`
   mutation addOrder($products: [ID]!) {
     addOrder(products: $products) {
