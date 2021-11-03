@@ -71,7 +71,7 @@ export default function Nav() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            Soles R' Us
           </Typography>
           <Search>
             <SearchIconWrapper>
