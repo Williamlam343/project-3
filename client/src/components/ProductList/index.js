@@ -6,6 +6,8 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
+import ShoeCard from '../Card'
+import { Pagination } from "@mui/material"
 
 function ProductList() {
   const [state, dispatch] = useStoreContext();
@@ -20,6 +22,7 @@ function ProductList() {
         type: UPDATE_PRODUCTS,
         products: data.products,
       });
+
       data.products.forEach((product) => {
         idbPromise('products', 'put', product);
       });
@@ -45,17 +48,19 @@ function ProductList() {
 
   return (
     <div className="my-2">
-      <h2>Our Products:</h2>
+
       {state.products.length ? (
-        <div className="flex-row">
+        <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-2 my-4">
           {filterProducts().map((product) => (
-            <ProductItem
+            <ShoeCard
               key={product._id}
               _id={product._id}
               image={product.image}
               name={product.name}
               price={product.price}
               quantity={product.quantity}
+              description={product.description}
+              category={product.category}
             />
           ))}
         </div>
@@ -63,6 +68,9 @@ function ProductList() {
         <h3>You haven't added any products yet!</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
+
+      <Pagination className="flex justify-center" count={5} />
+
     </div>
   );
 }
