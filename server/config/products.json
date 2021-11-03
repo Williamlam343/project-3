@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Nike",
+    "description": "Awesome looking shoes",
+    "image": "cookie-tin.jpg",
+    "category": "categories[26]._id",
+    "price": 100,
+    "quantity": 25
+  },
+  {
+    "name": "Adidas",
+    "description": "Awesome looking shoes",
+    "image": "cookie-tin.jpg",
+    "category": "categories[1]._id",
+    "price": 100,
+    "quantity": 25
+  },
+  {
+    "name": "Air Jordans",
+    "description": "Awesome looking shoes",
+    "image": "cookie-tin.jpg",
+    "category": "categories[2]._id",
+    "price": 100,
+    "quantity": 25
+  },
+  {
+    "name": "Alexander McQueen",
+    "description": "Awesome looking shoes",
+    "image": "cookie-tin.jpg",
+    "category": "categories[3]._id",
+    "price": 100,
+    "quantity": 25
+  },
+  {
+    "name": "Surpreme",
+    "description": "Awesome looking shoes",
+    "image": "cookie-tin.jpg",
+    "category": "categories[36]._id",
+    "price": 100,
+    "quantity": 25
+  },
+  {
+    "name": "Yeezy",
+    "description": "Awesome looking shoes",
+    "image": "cookie-tin.jpg",
+    "category": "categories[43]._id",
+    "price": 100,
+    "quantity": 25
+  },
+  {
+    "name": "Puma",
+    "description": "Awesome looking shoes",
+    "image": "cookie-tin.jpg",
+    "category": "categories[30]._id",
+    "price": 100,
+    "quantity": 25
+  }
+]
