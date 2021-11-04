@@ -1,14 +1,15 @@
 import React from 'react';
-import { Navbar, NavItem, Icon } from 'react-materialize';
-
-
+import { Navbar, Icon } from 'react-materialize';
+import { Button } from 'react-materialize';
+import { Link } from 'react-router-dom';
+import { Search } from 'react-router-dom';
 
 export default function Nav() {
   return (
     <Navbar
       className="orange lighten-2"
       alignLinks="left"
-      brand={<a className="brand-logo" href="#">Logo</a>}
+      brand={<a className="brand-logo">Soles R' Us</a>}
       centerLogo
       id="mobile-nav"
       menuIcon={<Icon>menu</Icon>}
@@ -24,12 +25,21 @@ export default function Nav() {
         preventScrolling: true
       }}
     >
-      <NavItem onClick={function noRefCheck() { }}>
-        Getting started
-      </NavItem>
-      <NavItem href="components.html">
-        Components
-      </NavItem>
+  <Link to='/login'>
+    <Button >
+    LOG IN
+    </Button>
+  </Link>
+  <Link to='/Signup'>
+    <Button >
+    SIGN UP
+    </Button>
+  </Link>
+  <Link to='/OrderHistory'>
+    <Button >
+    ORDERS
+    </Button>
+  </Link>
     </Navbar>
   );
 }
