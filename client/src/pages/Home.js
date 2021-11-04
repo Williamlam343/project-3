@@ -11,7 +11,7 @@ const Home = () => {
 
       <CategoryMenu />
       <ProductList />
-      {/* <Cart /> */}
+      <Cart />
 
     </div>
   );
