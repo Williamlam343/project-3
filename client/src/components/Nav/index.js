@@ -26,19 +26,13 @@ export default function Nav() {
       }}
     >
   <Link to='/login'>
-    <Button >
     LOG IN
-    </Button>
   </Link>
   <Link to='/Signup'>
-    <Button >
     SIGN UP
-    </Button>
   </Link>
   <Link to='/OrderHistory'>
-    <Button >
     ORDERS
-    </Button>
   </Link>
     </Navbar>
   );
