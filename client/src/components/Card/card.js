@@ -27,8 +27,8 @@ export default function ShoeCard(item) {
                 <CardMedia
                     component="img"
                     height="140"
-                    image="https://i.stack.imgur.com/y9DpT.jpg"
-                    alt="green iguana"
+                    image={image}
+                    alt="sneaker card"
                 />
                 <CardContent className="text-center">
                     <Typography gutterBottom className="text-left" variant="h5" component="div">

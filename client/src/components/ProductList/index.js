@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ProductItem from '../ProductItem';
+// import ProductItem from '../ProductItem';
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
@@ -48,7 +48,7 @@ function ProductList() {
 
   return (
     <div className="my-2">
-
+      <h3>Featured:</h3>
       {state.products.length ? (
         <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-2 my-4">
           {filterProducts().map((product) => (
@@ -69,7 +69,7 @@ function ProductList() {
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
 
-      <Pagination className="flex justify-center" count={5} />
+      <Pagination className="orange accent-2 flex justify-center" count={5} />
 
     </div>
   );

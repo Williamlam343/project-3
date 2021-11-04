@@ -15,14 +15,14 @@ db.once('open', async () => {
     {
       "name": "Nike",
       "description": "Awesome looking shoes",
-      "image": "cookie-tin.jpg",
+      "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
       "category": brandsID[26]._id,
       "price": 100,
       "quantity": 25
     }, {
       "name": "Adidas",
       "description": "Awesome looking shoes",
-      "image": "cookie-tin.jpg",
+      "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
       "category": brandsID[1]._id,
       "price": 100,
       "quantity": 25
@@ -30,7 +30,7 @@ db.once('open', async () => {
     {
       "name": "Air Jordans",
       "description": "Awesome looking shoes",
-      "image": "cookie-tin.jpg",
+      "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
       "category": brandsID[2]._id,
       "price": 100,
       "quantity": 25
@@ -38,7 +38,7 @@ db.once('open', async () => {
     {
       "name": "Alexander McQueen",
       "description": "Awesome looking shoes",
-      "image": "cookie-tin.jpg",
+      "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
       "category": brandsID[3]._id,
       "price": 100,
       "quantity": 25
@@ -46,7 +46,7 @@ db.once('open', async () => {
     {
       "name": "Surpreme",
       "description": "Awesome looking shoes",
-      "image": "cookie-tin.jpg",
+      "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
       "category": brandsID[36]._id,
       "price": 100,
       "quantity": 25
@@ -54,7 +54,7 @@ db.once('open', async () => {
     {
       "name": "Yeezy",
       "description": "Awesome looking shoes",
-      "image": "cookie-tin.jpg",
+      "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
       "category": brandsID[43]._id,
       "price": 100,
       "quantity": 25
@@ -62,7 +62,7 @@ db.once('open', async () => {
     {
       "name": "Puma",
       "description": "Awesome looking shoes",
-      "image": "cookie-tin.jpg",
+      "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
       "category": brandsID[30]._id,
       "price": 100,
       "quantity": 25
