@@ -10,20 +10,27 @@ db.once('open', async () => {
   await Product.deleteMany();
   await User.deleteMany();
 
-  let brandsID = await Category.insertMany(brands);
+  let brandsID = await Category.insertMany([
+    { name: "Adidas" },
+    { name: "Nike" },
+    { name: "Jordan" },
+    { name: "Vans" },
+    { name: "Converse" },
+    { name: "Under Armour" },
+  ]);
   let productSeed = await Product.insertMany([
     {
       "name": "Nike",
       "description": "Awesome looking shoes",
       "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
-      "category": brandsID[26]._id,
+      "category": brandsID[1]._id,
       "price": 100,
       "quantity": 25
     }, {
       "name": "Adidas",
       "description": "Awesome looking shoes",
       "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
-      "category": brandsID[1]._id,
+      "category": brandsID[0]._id,
       "price": 100,
       "quantity": 25
     },
@@ -31,23 +38,23 @@ db.once('open', async () => {
       "name": "Air Jordans",
       "description": "Awesome looking shoes",
       "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
-      "category": brandsID[2]._id,
-      "price": 100,
-      "quantity": 25
-    },
-    {
-      "name": "Alexander McQueen",
-      "description": "Awesome looking shoes",
-      "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
       "category": brandsID[3]._id,
       "price": 100,
       "quantity": 25
     },
     {
-      "name": "Surpreme",
+      "name": "Converse",
       "description": "Awesome looking shoes",
       "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
-      "category": brandsID[36]._id,
+      "category": brandsID[5]._id,
+      "price": 100,
+      "quantity": 25
+    },
+    {
+      "name": "Adidas",
+      "description": "Awesome looking shoes",
+      "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
+      "category": brandsID[0]._id,
       "price": 100,
       "quantity": 25
     },
@@ -55,15 +62,15 @@ db.once('open', async () => {
       "name": "Yeezy",
       "description": "Awesome looking shoes",
       "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
-      "category": brandsID[43]._id,
+      "category": brandsID[0]._id,
       "price": 100,
       "quantity": 25
     },
     {
-      "name": "Puma",
+      "name": "Under Armour",
       "description": "Awesome looking shoes",
       "image": "https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png",
-      "category": brandsID[30]._id,
+      "category": brandsID[5]._id,
       "price": 100,
       "quantity": 25
     }

@@ -7,12 +7,14 @@ import { Search } from 'react-router-dom';
 export default function Nav() {
   return (
     <Navbar
-      className="orange lighten-2"
+      className="white lighten-2"
       alignLinks="left"
-      brand={<a className="brand-logo">Soles R' Us</a>}
+
+      brand={<a className="grey-text text-darken-3 brand-logo" href="#">Soles R' Us</a>}
+
       centerLogo
       id="mobile-nav"
-      menuIcon={<Icon>menu</Icon>}
+      menuIcon={<Icon className="black-text">menu</Icon>}
       options={{
         draggable: true,
         edge: 'left',
@@ -25,6 +27,7 @@ export default function Nav() {
         preventScrolling: true
       }}
     >
+
   <Link to='/login'>
     LOG IN
   </Link>
@@ -34,6 +37,8 @@ export default function Nav() {
   <Link to='/OrderHistory'>
     ORDERS
   </Link>
+
+
     </Navbar>
   );
 }
