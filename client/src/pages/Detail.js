@@ -92,7 +92,7 @@ function Detail() {
               className="s5"
 
             >
-              <img className="rounded z-depth-2 my-1 w-full h-auto" src="https://image.goat.com/attachments/product_template_pictures/images/041/243/759/original/650785_00.png.png">
+              <img className="rounded z-depth-2 my-1 w-full h-auto" src={currentProduct.image}>
               </img>
             </Col>
 
