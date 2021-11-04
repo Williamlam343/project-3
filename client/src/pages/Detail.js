@@ -20,7 +20,6 @@ function Detail() {
   const [currentProduct, setCurrentProduct] = useState({});
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-  console.log(currentProduct)
   const { products, cart } = state;
 
   useEffect(() => {
@@ -175,7 +174,7 @@ function Detail() {
 
               <div className="flex justify-center">
 
-                <Button className="rounded z-depth-2 relative my-10 grey-text text-darken-4 yellow lighten-2">Procced to Checkout</Button>
+                <Button className="rounded z-depth-2 relative my-10 white-text text-darken-4 blue">Procced to Checkout</Button>
               </div>
             </Col>
           </Row>

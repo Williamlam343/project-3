@@ -69,7 +69,7 @@ function ProductList() {
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
 
-      <Pagination className="orange accent-2 flex justify-center" count={5} />
+      <Pagination className="white z-depth-2 accent-2 flex justify-center" count={5} />
 
     </div>
   );

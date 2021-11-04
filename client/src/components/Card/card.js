@@ -1,18 +1,12 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
-import { pluralize } from "../../utils/helpers"
+import React from 'react';
+import { Card, Icon, CardTitle, Col, Row, Button } from "react-materialize"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import { Link } from 'react-router-dom';
 
 export default function ShoeCard(item) {
     const [state, dispatch] = useStoreContext();
-
-    console.log(item)
     const {
         image,
         name,
@@ -21,29 +15,31 @@ export default function ShoeCard(item) {
         quantity,
         description
     } = item;
+
     return (
-        <Card className="" sx={{ maxWidth: 400, boxShadow: 3 }}>
-            <CardActionArea>
-                <CardMedia
-                    component="img"
-                    height="140"
-                    image={image}
-                    alt="sneaker card"
-                />
-                <CardContent className="text-center">
-                    <Typography gutterBottom className="text-left" variant="h5" component="div">
-                        {name}
-                    </Typography>
-                    <Typography className=" text-xl " variant="body" >
-                        {`$${price}`}
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions className="justify-center" >
-                <Button size="medium" variant="outlined" color="primary">
-                    Buy Now
-                </Button>
-            </CardActions>
+
+        <Card
+
+            textClassName="grey-text text-darken-4"
+            className="min-w-full z-depth-2"
+            actions={[
+                <Button className="red lighten-1" key="1" href="#">Buy Now</Button>
+            ]}
+            closeIcon={<Icon>close</Icon>}
+            header={
+                <Link to={`/products/${_id}`}>
+                    <CardTitle className="" waves="red" image={image}
+
+                    ><span className="grey-text text-darken-4">{name}</span></CardTitle>
+                </Link>
+
+            }
+
+        >
+            <h6>{description}</h6>
+            <h5>{`$${price}`}</h5>
         </Card>
+
+
     );
 }
