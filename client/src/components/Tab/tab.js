@@ -1,72 +1,45 @@
 import React from "react";
 import { Tab, Tabs } from "react-materialize";
+import { Link } from "react-router-dom";
+import { useQuery } from '@apollo/client';
+import { QUERY_CATEGORIES } from '../../utils/queries';
+
 
 
 export default function HomeTab() {
+
+
+    const { loading, data } = useQuery(QUERY_CATEGORIES)
+    const brands = data?.categories || []
+
+
     return (
         <Tabs
-            className=" z-depth-2 orange lighten-2 tabs-fixed-width"
+            className=" z-depth-2 white lighten-2 tabs-fixed-width"
             scope="tabs-24"
         >
-            <Tab
-                active
-                className=" text-black"
-                options={{
-                    duration: 300,
-                    onShow: null,
-                    responsiveThreshold: Infinity,
-                    swipeable: true
-                }}
-                title={<p className="text-white">Nike</p>}
-            >
-                <p className="">Test 1</p>
-            </Tab>
-            <Tab
-                active
-                options={{
-                    duration: 300,
-                    onShow: null,
-                    responsiveThreshold: Infinity,
-                    swipeable: false
-                }}
-                title={<p className="text-white">Adidas</p>}
-            >
-                Test 2
-            </Tab>
-            <Tab
 
-                options={{
-                    duration: 300,
-                    onShow: null,
-                    responsiveThreshold: Infinity,
-                    swipeable: false
-                }}
-                title={<p className="text-white">Yeezy</p>}
-            >
-                Test 3
-            </Tab>
-            <Tab
-                options={{
-                    duration: 300,
-                    onShow: null,
-                    responsiveThreshold: Infinity,
-                    swipeable: false
-                }}
-                title={<p className="text-white">Alexander McQueen</p>}
-            >
-                Test 4
-            </Tab>
-            <Tab
-                options={{
-                    duration: 300,
-                    onShow: null,
-                    responsiveThreshold: Infinity,
-                    swipeable: false
-                }}
-                title={<p className="text-white">Surpreme</p>}
-            >
-                Test 5
-            </Tab>
+            {loading ? (<div>Loading...</div>) : (
+                brands.map((brand) =>
+                    <Tab
+
+                        key={brand.name}
+                        className=" text-black"
+                        options={{
+                            duration: 300,
+                            onShow: null,
+                            responsiveThreshold: Infinity,
+
+                        }}
+                        title={
+
+                            <p className="grey-text text-darken-3">{brand.name}</p>
+
+                        }
+                    />
+                )
+            )}
+
         </Tabs>
     )
 }

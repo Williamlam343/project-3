@@ -1,67 +1,61 @@
-import { padding } from '@mui/system';
+
 import React from 'react';
 import { Carousel } from 'react-materialize';
+import { Slider, Caption, Slide } from 'react-materialize';
 
 export default function HomeCarousel() {
 
     return (
-        <Carousel
-            carouselId="Carousel-32"
-            className="white-text center max-h-96 "
-            // images={[
-            //     "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
-            //     "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
-            //     "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
-            //     "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
-            // ]}
+        <Slider
+
+            fullscreen={false}
             options={{
                 duration: 500,
-                fullWidth: true,
-                indicators: true,
-                shift: 0,
-                padding: 0
+                height: 300,
+                indicators: false,
+                interval: 6000
             }}
         >
-            <div className="red" style={
-                {
-                    background: `url(https://cdn.discordapp.com/attachments/736379151853944852/905672780379467826/union-air-jordan-4-guava-DC9533-800-6.png)`,
-                    backgroundPosition: "50% 60%",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover"
-
-                }
-            }>
-                <h2>
-                    First Panel
-                </h2>
-                <p>
-                    This is your first panel
-                </p>
-            </div>
-            <div className="amber">
-                <h2>
-                    Second Panel
-                </h2>
-                <p>
-                    This is your second panel
-                </p>
-            </div>
-            <div className="green">
-                <h2>
-                    Third Panel
-                </h2>
-                <p>
-                    This is your third panel
-                </p>
-            </div>
-            <div className="blue">
-                <h2>
-                    Fourth Panel
-                </h2>
-                <p>
-                    This is your fourth panel
-                </p>
-            </div>
-        </Carousel>
+            <Slide image={<img alt="" src="" />}>
+                <Caption placement="center">
+                    <h3 className="light grey-text text-darken-4">
+                        This is our big Tagline!
+                    </h3>
+                    <h5 className="light grey-text text-darken-4">
+                        Here's our small slogan.
+                    </h5>
+                </Caption>
+            </Slide>
+            <Slide image={<img alt="" src="" />}>
+                <Caption placement="left">
+                    <h3>
+                        Left Aligned Caption
+                    </h3>
+                    <h5 className="light grey-text text-lighten-3">
+                        Here's our small slogan.
+                    </h5>
+                </Caption>
+            </Slide>
+            <Slide image={<img alt="" src="" />}>
+                <Caption placement="right">
+                    <h3>
+                        Right Aligned Caption
+                    </h3>
+                    <h5 className="light grey-text text-lighten-3">
+                        Here's our small slogan.
+                    </h5>
+                </Caption>
+            </Slide>
+            <Slide image={<img alt="" src="" />}>
+                <Caption placement="center">
+                    <h3>
+                        This is our big Tagline!
+                    </h3>
+                    <h5 className="light grey-text text-lighten-3">
+                        Here's our small slogan.
+                    </h5>
+                </Caption>
+            </Slide>
+        </Slider>
     )
 }
