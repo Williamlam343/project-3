@@ -11,9 +11,6 @@ const productSchema = new Schema({
   description: {
     type: String
   },
-  gender: {
-    type: String
-  },
   image: {
     type: String
   },
