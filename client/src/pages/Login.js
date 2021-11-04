@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
-
+import { Button } from "react-materialize"
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
@@ -30,7 +30,7 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1">
+    <div className="container min-h-screen my-1">
       <h3> Don't have an account? </h3>
       <Link to="/signup">← Go to Signup</Link>
 
@@ -61,8 +61,8 @@ function Login(props) {
             <p className="error-text">The provided credentials are incorrect</p>
           </div>
         ) : null}
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+        <div className="flex-row justify-center">
+          <Button className="red lighten-1" type="submit">Submit</Button>
         </div>
       </form>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import NoMatch from "./NoMatch"
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
 
@@ -14,11 +14,11 @@ function OrderHistory() {
 
   return (
     <>
-      <div className="container my-1">
-        <Link to="/">← Back to Products</Link>
+      <div className="container min-h-screen my-1">
 
         {user ? (
           <>
+            <Link to="/">← Back to Products</Link>
             <h2>
               Order History for {user.firstName} {user.lastName}
             </h2>
@@ -43,7 +43,7 @@ function OrderHistory() {
               </div>
             ))}
           </>
-        ) : null}
+        ) : <NoMatch />}
       </div>
     </>
   );

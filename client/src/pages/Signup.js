@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
+import { Button } from "react-materialize"
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -31,7 +32,7 @@ function Signup(props) {
   };
 
   return (
-    <div className="container my-1">
+    <div className="container  min-h-screen my-1">
       <h3> Already have an account? </h3>
       <Link to="/login">← Go to Login</Link>
 
@@ -77,8 +78,8 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+        <div className="flex-row justify-center">
+          <Button className="red lighten-1" type="submit">Submit</Button>
         </div>
       </form>
     </div>

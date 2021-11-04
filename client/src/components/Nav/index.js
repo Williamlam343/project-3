@@ -1,16 +1,15 @@
 import React from 'react';
 import { Navbar, Icon } from 'react-materialize';
-import { Button } from 'react-materialize';
 import { Link } from 'react-router-dom';
-import { Search } from 'react-router-dom';
+
 
 export default function Nav() {
   return (
     <Navbar
       className="white lighten-2"
-      alignLinks="left"
+      alignLinks="right"
 
-      brand={<a className="grey-text text-darken-3 brand-logo" href="#">Soles R' Us</a>}
+      brand={<Link className="grey-text text-darken-4 brand-logo" to="/">Soles R' Us</Link>}
 
       centerLogo
       id="mobile-nav"
@@ -27,16 +26,18 @@ export default function Nav() {
         preventScrolling: true
       }}
     >
-
-  <Link to='/login'>
-    LOG IN
-  </Link>
-  <Link to='/Signup'>
-    SIGN UP
-  </Link>
-  <Link to='/OrderHistory'>
-    ORDERS
-  </Link>
+      <Link className="grey-text text-darken-3" to='/login'>
+        Login
+      </Link>
+      <Link className="grey-text text-darken-3" to='/Signup'>
+        Sign-Up
+      </Link>
+      <Link className="grey-text text-darken-3" to='/OrderHistory'>
+        Your Orders
+      </Link>
+      <Link className="grey-text text-darken-3" to='/Cart'>
+        <Icon>shopping_cart</Icon>
+      </Link>
 
 
     </Navbar>
