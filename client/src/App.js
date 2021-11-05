@@ -20,6 +20,8 @@ import OrderHistory from './pages/OrderHistory';
 import HomeCarousel from './components/Carousel';
 import HomeTab from './components/Tab';
 import HomeFooter from './components/Footer';
+import Cart from "./components/Cart"
+import ProductList from './components/ProductList';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -57,6 +59,8 @@ function App() {
               <Route exact path="/success" component={Success} />
               <Route exact path="/orderHistory" component={OrderHistory} />
               <Route exact path="/products/:id" component={Detail} />
+              <Route exact path="/cart" component={Cart} />
+              <Route exact path="/adidas" component={ProductList} />
               <Route component={NoMatch} />
             </Switch>
           </StoreProvider>

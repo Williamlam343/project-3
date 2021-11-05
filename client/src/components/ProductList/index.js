@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-// import ProductItem from '../ProductItem';
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
@@ -7,7 +6,7 @@ import { QUERY_PRODUCTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 import ShoeCard from '../Card'
-import { Pagination } from "@mui/material"
+import { Pagination, Row } from "react-materialize";
 
 function ProductList() {
   const [state, dispatch] = useStoreContext();
@@ -47,31 +46,36 @@ function ProductList() {
   }
 
   return (
-    <div className="my-2">
-      <h3>Featured:</h3>
-      {state.products.length ? (
-        <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-2 my-4">
-          {filterProducts().map((product) => (
-            <ShoeCard
-              key={product._id}
-              _id={product._id}
-              image={product.image}
-              name={product.name}
-              price={product.price}
-              quantity={product.quantity}
-              description={product.description}
-              category={product.category}
-            />
-          ))}
-        </div>
-      ) : (
-        <h3>You haven't added any products yet!</h3>
-      )}
-      {loading ? <img src={spinner} alt="loading" /> : null}
+    <>
+      <div className="container my-2">
+        <h3>Featured:</h3>
+        {state.products.length ? (
+          <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-2 my-4">
+            {filterProducts().map((product) => (
+              <ShoeCard
+                key={product._id}
+                _id={product._id}
+                image={product.image}
+                name={product.name}
+                price={product.price}
+                quantity={product.quantity}
+                description={product.description}
+                category={product.category}
+              />
+            ))}
+          </div>
+        ) : (
+          <h3>You haven't added any products yet!</h3>
+        )}
+        {loading ? <img src={spinner} alt="loading" /> : null}
+        <Row>
 
-      <Pagination className="white z-depth-2 accent-2 flex justify-center" count={5} />
+          <Pagination className="white flex justify-center" items={5} />
+        </Row>
 
-    </div>
+      </div>
+
+    </>
   );
 }
 

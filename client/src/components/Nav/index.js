@@ -1,12 +1,15 @@
 import React from 'react';
 import { Navbar, Icon } from 'react-materialize';
 import { Link } from 'react-router-dom';
-
-
+import Auth from '../../utils/auth';
 export default function Nav() {
+
+
+
+
   return (
     <Navbar
-      className="white lighten-2"
+      className="white z-depth-3"
       alignLinks="right"
 
       brand={<Link className="grey-text text-darken-4 brand-logo" to="/">Soles R' Us</Link>}
@@ -26,19 +29,27 @@ export default function Nav() {
         preventScrolling: true
       }}
     >
-      <Link className="grey-text text-darken-3" to='/login'>
-        Login
-      </Link>
-      <Link className="grey-text text-darken-3" to='/Signup'>
-        Sign-Up
-      </Link>
-      <Link className="grey-text text-darken-3" to='/OrderHistory'>
-        Your Orders
-      </Link>
-      <Link className="grey-text text-darken-3" to='/Cart'>
-        <Icon>shopping_cart</Icon>
-      </Link>
+      {Auth.loggedIn() ? <Link className="grey-text text-darken-3" onClick={() => Auth.logout()}>
+        Logout
+      </Link> :
+        <Link className="grey-text text-darken-3" to='/login'>
+          Login
+        </Link>
+      }
+      {!Auth.loggedIn() && <Link className="grey-text text-darken-3" to='/signup'>
+        Signup
+      </Link>}
 
+
+      {Auth.loggedIn() && <Link className="grey-text text-darken-3" to='/orderHistory'>
+        Your Orders
+      </Link>}
+
+      <Link className="grey-text text-darken-3" to='/cart'>
+        <p>
+          <Icon>shopping_cart</Icon>
+        </p>
+      </Link>
 
     </Navbar>
   );

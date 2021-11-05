@@ -47,16 +47,18 @@ function CategoryMenu() {
 
       <div>
 
-        {/* {categories.map((item) => (
-        <Button
-          key={item._id}
-          onClick={() => {
-            handleClick(item._id);
-          }}
-        >
-          {item.name}
-        </Button>
-      ))} */}
+        {categories.map((item) => (
+          <Button
+            flat
+            node="button"
+            key={item._id}
+            onClick={() => {
+              handleClick(item._id);
+            }}
+          >
+            {item.name}
+          </Button>
+        ))}
       </div>
     </div>
   );

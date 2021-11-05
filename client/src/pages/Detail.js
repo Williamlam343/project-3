@@ -4,14 +4,13 @@ import { useQuery } from '@apollo/client';
 import { Row, Col, Card, Icon, Button, Select } from 'react-materialize';
 import { useStoreContext } from '../utils/GlobalState';
 import {
-  REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
   ADD_TO_CART,
   UPDATE_PRODUCTS,
 } from '../utils/actions';
 import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
-import spinner from '../assets/spinner.gif';
+
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
@@ -21,6 +20,8 @@ function Detail() {
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
   const { products, cart } = state;
+
+  console.log(cart.length)
 
   useEffect(() => {
     if (products.length) {
@@ -50,6 +51,7 @@ function Detail() {
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id);
+
     if (itemInCart) {
       dispatch({
         type: UPDATE_CART_QUANTITY,
@@ -67,16 +69,10 @@ function Detail() {
       });
       idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
     }
+
+    console.log("successfully added to cart")
   };
 
-  const removeFromCart = () => {
-    dispatch({
-      type: REMOVE_FROM_CART,
-      _id: currentProduct._id,
-    });
-
-    idbPromise('cart', 'delete', { ...currentProduct });
-  };
 
   return (
     <>
@@ -89,7 +85,6 @@ function Detail() {
               s={12}
               m={6}
               className="s5"
-
             >
               <img className="rounded z-depth-2 my-1 w-full h-auto" src={currentProduct.image}>
               </img>
@@ -106,7 +101,8 @@ function Detail() {
                 style={{ width: "100%" }}
                 className="text-black flex flex-col justify-center z-depth-2 w-full right-0"
                 actions={[
-                  <Button className="rounded red lighten-1">Add to Cart</Button>
+
+                  <Button onClick={addToCart} className="rounded red lighten-1">Add to Cart</Button>
                 ]}
 
                 closeIcon={<Icon>close</Icon>}
@@ -173,14 +169,16 @@ function Detail() {
               </Card>
 
               <div className="flex justify-center">
+                <Link to="/cart">
 
-                <Button className="rounded z-depth-2 relative my-10 white-text text-darken-4 blue">Procced to Checkout</Button>
+                  <Button className="rounded z-depth-2 relative my-10 white-text text-darken-4 blue">Procced to Checkout</Button>
+                </Link>
               </div>
             </Col>
           </Row>
         </div>
       ) : null}
-      {loading ? <img src={spinner} alt="loading" /> : null}
+      {loading ? <div>Loading...</div> : null}
 
     </>
   );

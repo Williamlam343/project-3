@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
-import { Button } from "react-materialize"
+import { Button, TextInput } from "react-materialize"
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -33,45 +33,40 @@ function Signup(props) {
 
   return (
     <div className="container  min-h-screen my-1">
-      <h3> Already have an account? </h3>
+      <h5> Already have an account? </h5>
       <Link to="/login">← Go to Login</Link>
 
-      <h4>Signup</h4>
+      <h5>Signup</h5>
       <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            placeholder="First"
-            name="firstName"
-            type="firstName"
+
+        <div>
+          <TextInput
             id="firstName"
-            onChange={handleChange}
+            label="First Name"
           />
         </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            placeholder="Last"
-            name="lastName"
-            type="lastName"
+        <div>
+          <TextInput
+            label="Last Name"
+
+
             id="lastName"
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
-          <input
-            placeholder="youremail@test.com"
+        <div >
+          <TextInput
+            label="Email"
             name="email"
             type="email"
             id="email"
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
+        <div>
+          <TextInput
+            label="Password"
+            password
             name="password"
             type="password"
             id="pwd"
