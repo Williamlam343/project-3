@@ -1,16 +1,18 @@
 import React from 'react';
 import { Navbar, Icon } from 'react-materialize';
-import { Button } from 'react-materialize';
 import { Link } from 'react-router-dom';
-import { Search } from 'react-router-dom';
-
+import Auth from '../../utils/auth';
 export default function Nav() {
+
+
+
+
   return (
     <Navbar
-      className="white lighten-2"
-      alignLinks="left"
+      className="white z-depth-3"
+      alignLinks="right"
 
-      brand={<a className="grey-text text-darken-3 brand-logo" href="#">Soles R' Us</a>}
+      brand={<Link className="grey-text text-darken-4 brand-logo" to="/">Soles R' Us</Link>}
 
       centerLogo
       id="mobile-nav"
@@ -27,17 +29,27 @@ export default function Nav() {
         preventScrolling: true
       }}
     >
+      {Auth.loggedIn() ? <Link className="grey-text text-darken-3" onClick={() => Auth.logout()}>
+        Logout
+      </Link> :
+        <Link className="grey-text text-darken-3" to='/login'>
+          Login
+        </Link>
+      }
+      {!Auth.loggedIn() && <Link className="grey-text text-darken-3" to='/signup'>
+        Signup
+      </Link>}
 
-  <Link to='/login'>
-    LOG IN
-  </Link>
-  <Link to='/Signup'>
-    SIGN UP
-  </Link>
-  <Link to='/OrderHistory'>
-    ORDERS
-  </Link>
 
+      {Auth.loggedIn() && <Link className="grey-text text-darken-3" to='/orderHistory'>
+        Your Orders
+      </Link>}
+
+      <Link className="grey-text text-darken-3" to='/cart'>
+        <p>
+          <Icon>shopping_cart</Icon>
+        </p>
+      </Link>
 
     </Navbar>
   );

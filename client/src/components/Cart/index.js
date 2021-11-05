@@ -6,15 +6,16 @@ import { idbPromise } from '../../utils/helpers';
 import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
-import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
-import './style.css';
+import { ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import { Link } from 'react-router-dom';
+import { Button, Row, Col } from "react-materialize"
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-
+  console.log(state.cart)
   useEffect(() => {
     if (data) {
       stripePromise.then((res) => {
@@ -34,9 +35,6 @@ const Cart = () => {
     }
   }, [state.cart.length, dispatch]);
 
-  function toggleCart() {
-    dispatch({ type: TOGGLE_CART });
-  }
 
   function calculateTotal() {
     let sum = 0;
@@ -60,47 +58,38 @@ const Cart = () => {
     });
   }
 
-  if (!state.cartOpen) {
-    return (
-      <div className="cart-closed" onClick={toggleCart}>
-        <span role="img" aria-label="trash">
-          🛒
-        </span>
-      </div>
-    );
-  }
-
   return (
-    <div className="cart">
-      <div className="close" onClick={toggleCart}>
-        [close]
-      </div>
-      <h2>Shopping Cart</h2>
+    <div className="container min-h-screen">
+      <Link className="blue-text block" to="/">← Back to Shopping</Link>
+      <h4>Shopping Cart</h4>
       {state.cart.length ? (
-        <div>
-          {state.cart.map((item) => (
-            <CartItem key={item._id} item={item} />
-          ))}
-
-          <div className="flex-row space-between">
-            <strong>Total: ${calculateTotal()}</strong>
+        <Row >
+          <Col
+            className="flex flex-col md:flex-row space-between"
+            m={12}>
+            <p className="text-2xl" >Total: ${calculateTotal()}</p>
 
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <Button className="blue relative md:bottom-2" onClick={submitCheckout}>Checkout</Button>
             ) : (
-              <span>(log in to check out)</span>
+              <Link to="/login">Login to Checkout</Link>
             )}
-          </div>
-        </div>
+          </Col>
+          <Col m={12}
+            className="grid gap-4 xl:grid-cols-2 grid-cols-1">
+            {state.cart.map((item) => (
+              <CartItem key={item._id} item={item} />
+            ))}
+          </Col>
+
+        </Row>
       ) : (
-        <h3>
-          <span role="img" aria-label="shocked">
-            😱
-          </span>
+        <h5>
           You haven't added anything to your cart yet!
-        </h3>
-      )}
-    </div>
+        </h5>
+      )
+      }
+    </div >
   );
 };
 

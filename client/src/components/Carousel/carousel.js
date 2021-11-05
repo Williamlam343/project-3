@@ -16,8 +16,8 @@ export default function HomeCarousel() {
                 interval: 6000
             }}
         >
-            <Slide image={<img alt="" src="" />}>
-                <Caption placement="center">
+            <Slide image={<img alt="carousel shoes" src="https://cdn.discordapp.com/attachments/736379151853944852/905672780379467826/union-air-jordan-4-guava-DC9533-800-6.png" />}>
+                <Caption placement="left">
                     <h3 className="light grey-text text-darken-4">
                         This is our big Tagline!
                     </h3>

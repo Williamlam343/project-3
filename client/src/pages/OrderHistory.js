@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import NoMatch from "./NoMatch"
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
 
@@ -14,24 +14,24 @@ function OrderHistory() {
 
   return (
     <>
-      <div className="container my-1">
-        <Link to="/">← Back to Products</Link>
+      <div className="container min-h-screen my-1">
 
         {user ? (
           <>
-            <h2>
+            <Link to="/">← Back to Products</Link>
+            <h4>
               Order History for {user.firstName} {user.lastName}
-            </h2>
+            </h4>
             {user.orders.map((order) => (
               <div key={order._id} className="my-2">
-                <h3>
+                <h5>
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
-                </h3>
+                </h5>
                 <div className="flex-row">
                   {order.products.map(({ _id, image, name, price }, index) => (
                     <div key={index} className="card px-1 py-1">
                       <Link to={`/products/${_id}`}>
-                        <img alt={name} src={`/images/${image}`} />
+                        <img alt={name} src={`${image}`} />
                         <p>{name}</p>
                       </Link>
                       <div>
@@ -43,7 +43,7 @@ function OrderHistory() {
               </div>
             ))}
           </>
-        ) : null}
+        ) : <NoMatch />}
       </div>
     </>
   );

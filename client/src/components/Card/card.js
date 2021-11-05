@@ -23,7 +23,9 @@ export default function ShoeCard(item) {
             textClassName="grey-text text-darken-4"
             className="min-w-full z-depth-2"
             actions={[
-                <Button className="red lighten-1" key="1" href="#">Buy Now</Button>
+                <Link to={`/products/${_id}`}>
+                    <Button className="red lighten-1" key="1" href="#">Buy Now</Button>
+                </Link>
             ]}
             closeIcon={<Icon>close</Icon>}
             header={
