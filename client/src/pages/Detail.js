@@ -15,13 +15,13 @@ import { idbPromise } from '../utils/helpers';
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
-
+  console.log(id)
   const [currentProduct, setCurrentProduct] = useState({});
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
   const { products, cart } = state;
 
-  console.log(cart.length)
+
 
   useEffect(() => {
     if (products.length) {

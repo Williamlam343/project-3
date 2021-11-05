@@ -52,7 +52,6 @@ function App() {
             <HomeCarousel />
             <HomeTab />
             <Switch>
-
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
@@ -60,7 +59,7 @@ function App() {
               <Route exact path="/orderHistory" component={OrderHistory} />
               <Route exact path="/products/:id" component={Detail} />
               <Route exact path="/cart" component={Cart} />
-              <Route exact path="/adidas" component={ProductList} />
+              <Route exact path="/brands/:category" component={ProductList} />
               <Route component={NoMatch} />
             </Switch>
           </StoreProvider>

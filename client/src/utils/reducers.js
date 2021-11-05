@@ -7,8 +7,7 @@ import {
   ADD_MULTIPLE_TO_CART,
   UPDATE_CATEGORIES,
   UPDATE_CURRENT_CATEGORY,
-  CLEAR_CART,
-  TOGGLE_CART
+  CLEAR_CART
 } from "./actions";
 
 export const reducer = (state, action) => {
