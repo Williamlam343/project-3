@@ -13,7 +13,7 @@ function ProductList() {
   const { category } = useParams();
   console.log(category)
 
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
+  const { loading, data, refetch } = useQuery(QUERY_PRODUCTS);
 
   useEffect(() => {
     if (data) {
@@ -34,6 +34,12 @@ function ProductList() {
       });
     }
   }, [data, loading, dispatch]);
+
+  function pageHandler() {
+    let page = state.page
+    console.log(page)
+    refetch(QUERY_PRODUCTS, { variables: { page } })
+  }
 
   function filterProducts() {
     if (!category) {
@@ -70,7 +76,7 @@ function ProductList() {
         {loading ? <div>Loading...</div> : null}
         <Row>
 
-          <Pagination className="white flex justify-center" items={5} />
+          <Pagination onSelect={() => pageHandler()} className="white flex justify-center" items={5} />
         </Row>
 
       </div>
