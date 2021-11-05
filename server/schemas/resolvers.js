@@ -8,7 +8,7 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
-    products: async (parent, { category, name }) => {
+    products: async (parent, { category, name, page }) => {
       const params = {};
 
       if (category) {
@@ -21,7 +21,10 @@ const resolvers = {
         };
       }
 
-      return await Product.find(params).populate('category');
+
+
+
+      return await Product.find(params).populate('category').limit(8);
     },
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate('category');

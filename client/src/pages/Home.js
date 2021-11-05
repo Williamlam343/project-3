@@ -6,8 +6,8 @@ const Home = () => {
   return (
 
     <div className="min-h-screen">
+      <h3 className="container">Featured:</h3>
 
-      {/* <CategoryMenu /> */}
       <ProductList />
     </div>
 

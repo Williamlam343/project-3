@@ -3,9 +3,6 @@ import { Tab, Tabs } from "react-materialize";
 import { Link } from "react-router-dom";
 import { useQuery } from '@apollo/client';
 import { QUERY_CATEGORIES } from '../../utils/queries';
-import ShoeCard from "../Card/card";
-import ProductList from "../ProductList";
-
 export default function HomeTab() {
 
 
@@ -31,7 +28,7 @@ export default function HomeTab() {
                             responsiveThreshold: Infinity,
                         }}
                         title={
-                            <Link to={brand.name}>
+                            <Link to={`/brands/${brand.name}`}>
                                 <p className="grey-text text-darken-3">{brand.name}</p>
                             </Link>
                         }
