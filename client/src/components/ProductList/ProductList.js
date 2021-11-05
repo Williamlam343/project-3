@@ -4,7 +4,6 @@ import { UPDATE_PRODUCTS } from "../../utils/actions";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_PRODUCTS } from "../../utils/queries";
-import { idbPromise } from "../../utils/helpers";
 import ShoeCard from "../Card";
 import { Pagination, Row } from "react-materialize";
 
