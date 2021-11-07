@@ -1,7 +1,7 @@
 const db = require('./connection');
 const { User, Product, Category } = require('../models');
 
-const brands = require("./brands.json");
+// const brands = require("./brands.json");
 
 
 
