@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "build": "concurrently \"cd client && npm build\" \"cd server && npm run seed && npm start\"",
     "start": "node server/server.js"
   },
   "repository": {
