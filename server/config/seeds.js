@@ -388,19 +388,275 @@ db.once('open', async () => {
       "quantity": 25
     },
     {
-      "name": "Chuck Taylor",
-      "description": "Rock on with these crass classics.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/000/013/091/original/CN144585C.png.png",
+      "name": "One Star Low",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/363/340/original/172394C.png.png",
       "category": brandsID[4]._id,
-      "price": 45,
+      "price": 110,
       "quantity": 25
     },
     {
-      "name": "Old Skool",
+      "name": "Chuck 70",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/363/341/original/172395C.png.png",
+      "category": brandsID[4]._id,
+      "price": 110,
+      "quantity": 25
+    },
+    {
+      "name": "Kith x Chuck 70 High",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/628/920/original/KITH_CHUCK_70_WHT.png.png",
+      "category": brandsID[4]._id,
+      "price": 130,
+      "quantity": 25
+    },
+    {
+      "name": "All-Star 70",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/628/834/original/172465C.png.png",
+      "category": brandsID[4]._id,
+      "price": 130,
+      "quantity": 25
+    },
+    {
+      "name": "Chuck 70 Midnight Hibiscus",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/733/960/original/172140C.png.png",
+      "category": brandsID[4]._id,
+      "price": 85,
+      "quantity": 25
+    },
+    {
+      "name": "Run Star",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/253/320/original/172247C.png.png",
+      "category": brandsID[4]._id,
+      "price": 120,
+      "quantity": 25
+    },
+    {
+      "name": "Chuck 70 High",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/253/322/original/172365C.png.png",
+      "category": brandsID[4]._id,
+      "price": 90,
+      "quantity": 25
+    },
+    {
+      "name": "All Star CX Low",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/253/314/original/170994C.png.png",
+      "category": brandsID[4]._id,
+      "price": 70,
+      "quantity": 25
+    },
+    {
+      "name": "Chuck Taylor All Star High",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/253/308/original/169939F.png.png",
+      "category": brandsID[4]._id,
+      "price": 65,
+      "quantity": 25
+    },
+    {
+      "name": "Chuck Taylor All Star Low",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/526/333/original/171267F.png.png",
+      "category": brandsID[4]._id,
+      "price": 55,
+      "quantity": 25
+    },
+    {
+      "name": "Chuck Taylor All Star Lugged Winter",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/526/335/original/171425C.png.png",
+      "category": brandsID[4]._id,
+      "price": 110,
+      "quantity": 25
+    },
+    {
+      "name": "Converse Chuck Taylor 70",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/526/338/original/171438C.png.png",
+      "category": brandsID[4]._id,
+      "price": 140,
+      "quantity": 25
+    },
+    {
+      "name": "Sean Pablo x One Star Pro Low",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/229/858/original/171325C.png.png",
+      "category": brandsID[4]._id,
+      "price": 75,
+      "quantity": 25
+    },
+    {
+      "name": "Jack Purcell Low",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/678/494/original/168136C.png.png",
+      "category": brandsID[4]._id,
+      "price": 70,
+      "quantity": 25
+    },
+    {
+      "name": "Kelly Oubre Jr. x UNT1TL3D",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/229/859/original/172555C.png.png",
+      "category": brandsID[4]._id,
+      "price": 75,
+      "quantity": 25
+    },
+    {
+      "name": "Chuck 70 Low",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/172/826/original/171573C.png.png",
+      "category": brandsID[4]._id,
+      "price": 80,
+      "quantity": 25
+    },
+    {
+      "name": "Chuck 70 High",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/056/183/original/171459C.png.png",
+      "category": brandsID[4]._id,
+      "price": 95,
+      "quantity": 25
+    },
+    {
+      "name": "Louie Lopez Pro Mid",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/056/182/original/171330C.png.png",
+      "category": brandsID[4]._id,
+      "price": 75,
+      "quantity": 25
+    },
+    {
+      "name": "BAPE x Authentic",
       "description": "Shred with these timeless shoes.",
-      "image": "https://images.stockx.com/images/Vans-Style-36-Noon-Goons-Black-Snakeskin.jpg?fit=fill&bg=FFFFFF&w=375&h=375&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1617994952",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/628/836/original/BAPE_AUTHENTIC.png.png",
       "category": brandsID[3]._id,
       "price": 100,
+      "quantity": 25
+    },
+    {
+      "name": "BAPE x Sk8-Hi",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/628/837/original/BAPE_SK8.png.png",
+      "category": brandsID[3]._id,
+      "price": 100,
+      "quantity": 25
+    },
+    {
+      "name": "Awake NY x Sk8-Hi",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/804/073/original/AWAKE_SK8_GRN.png.png",
+      "category": brandsID[3]._id,
+      "price": 90,
+      "quantity": 25
+    },
+    {
+      "name": "Nigel Cabourn x OG Authentic",
+      "description": "Releasing as part of a capsule collection with the British designer, the Nigel Cabourn x Vans OG Authentic LX ‘USN’ takes inspiration from US Naval deck plimsolls from the Second World War.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/321/403/original/VN0A4BV99RE.png.png",
+      "category": brandsID[3]._id,
+      "price": 119,
+      "quantity": 25
+    },
+    {
+      "name": "Vans Era Horror Pack",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/321/407/original/VN0A4U39ZPM.png.png",
+      "category": brandsID[3]._id,
+      "price": 65,
+      "quantity": 25
+    },
+    {
+      "name": "Vans Vault UA OG Authentic",
+      "description": "",
+      "image": "https://images.stockx.com/images/Vans-Vault-UA-OG-Authentic-LX-Aries-Weed-Leaf-Yellow.jpg?fit=fill&bg=FFFFFF&w=375&h=375&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1630640916",
+      "category": brandsID[3]._id,
+      "price": 40,
+      "quantity": 25
+    },
+    {
+      "name": "Vans Authentic Bedwin",
+      "description": "Conceived in partnership with the Tokyo-based fashion brand, the Bedwin & The Heartbreakers x Vans Authentic ‘Multi B’ is taken from the four-piece ‘Bandana Pack.’",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/700/218/original/VN0A4BV99R9.png.png",
+      "category": brandsID[3]._id,
+      "price": 110,
+      "quantity": 25
+    },
+    {
+      "name": "Patta x Old Skool",
+      "description": "Drawn from the ‘Mean Eyed Cats’ collection, the Patta x Vans Old Skool VLT LX ‘Silver Pink’ launched exclusively at the Amsterdam-based retailer.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/700/226/original/VN0A4BVF5XF.png.png",
+      "category": brandsID[3]._id,
+      "price": 120,
+      "quantity": 25
+    },
+    {
+      "name": "NEIGHBORHOOD x ComfyCush",
+      "description": "The NEIGHBORHOOD x Vans ComfyCush Era ‘The Filth and the Fury’ delivers a stealthy colorway of a low-top sneaker designed in collaboration with the influential Tokyo-based streetwear brand.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/572/757/original/VN0A5DYB5E61.png.png",
+      "category": brandsID[3]._id,
+      "price": 130,
+      "quantity": 25
+    },
+    {
+      "name": "Vans Skate Authentic",
+      "description": "The Palace x Vans Skate Authentic “Jeremy the Duck - Black” is one of three colorways of the low-top skate shoe designed by the London skate and streetwear brand and Vans.",
+      "image": "https://images.stockx.com/images/Vans-Skate-Authentic-Palace-Jeremy-the-Duck-Black-Product.jpg?fit=fill&bg=FFFFFF&w=375&h=375&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1626289848",
+      "category": brandsID[3]._id,
+      "price": 120,
+      "quantity": 25
+    },
+    {
+      "name": "Lowland High ComfyCush",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/298/692/original/VN0A5DY99QP.png.png",
+      "category": brandsID[3]._id,
+      "price": 100,
+      "quantity": 25
+    },
+    {
+      "name": "atmos x Authentic",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/059/570/783/original/VN0A5HZS3321.png.png",
+      "category": brandsID[3]._id,
+      "price": 60,
+      "quantity": 25
+    },
+    {
+      "name": "Supreme x Era",
+      "description": "Launching as part of the ‘Monogram S’ pack, the Supreme x Vans Era ‘Royal’ dresses the lace-up in a printed two-tone canvas upper.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/017/422/original/786358_00.png.png",
+      "category": brandsID[3]._id,
+      "price": 130,
+      "quantity": 25
+    },
+    {
+      "name": "Skate Grosso Mid",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/850/758/original/VN0A5FCGYG9.png.png",
+      "category": brandsID[3]._id,
+      "price": 70,
+      "quantity": 25
+    },
+    {
+      "name": "C2H4 x Old Skool",
+      "description": "Conceived in partnership with the LA-based fashion label, the C2H4 x Vans Old Skool ‘Relic Stone’ features a dark grey textile upper with tonal suede paneling at the toe and heel.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/055/757/269/original/VN0A5AO92YD.png.png",
+      "category": brandsID[3]._id,
+      "price": 68,
+      "quantity": 25
+    },
+    {
+      "name": "Vans Old Skool Boys of Summer",
+      "description": "",
+      "image": "https://images.stockx.com/images/Vans-Old-Skool-Boys-of-Summer.jpg?fit=fill&bg=FFFFFF&w=375&h=375&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1622153932",
+      "category": brandsID[3]._id,
+      "price": 80,
       "quantity": 25
     },
     {
