@@ -20,118 +20,6 @@ db.once('open', async () => {
   ]);
   let productSeed = await Product.insertMany([
     {
-      "name": "Nike Air Force 1",
-      "description": "The Nike Air Force 1 ‘07 Premium ‘Halloween’ gets in the seasonal spirit with a premium black leather upper partially covered in a tonal print made up of balefully staring eyes.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/717/431/original/831733_00.png.png",
-      "category": brandsID[1]._id,
-      "price": 133,
-      "quantity": 25
-    },
-    {
-      "name": "Blazer Mid '77",
-      "description": "The Nike Blazer Mid ‘77 Premium ‘Dark Chocolate’ gets a material makeover while maintaining the shoe’s vintage basketball DNA.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/139/440/original/DM7581_200.png.png",
-      "category": brandsID[1]._id,
-      "price": 110,
-      "quantity": 25
-    },
-    {
-      "name": "Nike Air Force 1",
-      "description": "The Nike Air Force 1 ‘07 Premium ‘Halloween’ gets in the seasonal spirit with a premium black leather upper partially covered in a tonal print made up of balefully staring eyes.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/717/431/original/831733_00.png.png",
-      "category": brandsID[1]._id,
-      "price": 133,
-      "quantity": 25
-    },
-    {
-      "name": "Nike LD",
-      "description": "The sacai x Undercover x Nike LDWaffle ‘Night Maroon Team Royal’ reunites the three partner brands on a sneaker collaboration updated with sharply contrasting hues.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/778/734/original/815543_00.png.png",
-      "category": brandsID[1]._id,
-      "price": 170,
-      "quantity": 25
-    },
-    {
-      "name": "Nike Air Force 1 '07",
-      "description": "Commemorating the league’s 75th anniversary, the NBA x Nike Air Force 1 ‘07 LV8 ‘Spurs’ showcases vibrant accents that nod to San Antonio’s signature colors during the early ‘90s.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/717/194/original/834787_00.png.png",
-      "category": brandsID[1]._id,
-      "price": 100,
-      "quantity": 25
-    },
-    {
-      "name": "Nike Air Force 1",
-      "description": "Launching as part of a special collection honoring the 75th anniversary of the NBA, the Nike Air Force 1 ‘07 LV8 ‘Lakers’ showcases the signature colors of the franchises’ early years in Minneapolis and Los Angeles.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/755/460/original/819765_00.png.png",
-      "category": brandsID[1]._id,
-      "price": 100,
-      "quantity": 25
-    },
-    {
-      "name": "Court Vision Low",
-      "description": "The Nike Court Vision Low ‘White Turquoise Blue’ channels the familiar aesthetic of ‘80s basketball shoes.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/139/437/original/DM1187_100.png.png",
-      "category": brandsID[1]._id,
-      "price": 65,
-      "quantity": 25
-    },
-    {
-      "name": "Blazer Court Mid",
-      "description": "Mid lifestyle shoes.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/495/284/original/DC8901_001.png.png",
-      "category": brandsID[1]._id,
-      "price": 115,
-      "quantity": 25
-    },
-    {
-      "name": "KD 14",
-      "description": "The Nike KD 14 ‘Pop Art’ highlights primary-colored accents on Kevin Durant’s fourteenth signature shoe.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/718/266/original/815474_00.png.png",
-      "category": brandsID[1]._id,
-      "price": 150,
-      "quantity": 25
-    },
-    {
-      "name": "Dunk High Fragment",
-      "description": "The Fragment Design x Nike Dunk High ‘Tokyo’ delivers a continuation of the partner brands’ original 2010 City Pack collaboration.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/285/802/original/814962_00.png.png",
-      "category": brandsID[1]._id,
-      "price": 170,
-      "quantity": 25
-    },
-    {
-      "name": "Nike Dunk Low",
-      "description": "Launching as the third installment in the LA retailer’s ‘Dunk vs AF-1’ series, this triple-black edition of the Nike Dunk Low features an eclectic mix of materials throughout the upper.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/557/463/original/804800_00.png.png",
-      "category": brandsID[1]._id,
-      "price": 120,
-      "quantity": 25
-    },
-    {
-      "name": "Nike Air Presto",
-      "description": "The Nike Air Presto ‘What The’ mashes together elements drawn from OG colorways of the running shoe that Nike launched in 2000 as a ‘T-shirt for your feet.’",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/210/401/original/808890_00.png.png",
-      "category": brandsID[1]._id,
-      "price": 130,
-      "quantity": 25
-    },
-    {
-      "name": "Nike 7 EP",
-      "description": "The Nike Kyrie 7 EP ‘1 World 1 People’ pairs a message of inclusivity with an especially vibrant color scheme.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/059/105/998/original/CQ9327_700.png.png",
-      "category": brandsID[1]._id,
-      "price": 130,
-      "quantity": 25
-    },
-    {
-      "name": "Air Max",
-      "description": "The Nike Air Max Pre-Day LX ‘Chlorophyll’ delivers a two-tone colorway of a lifestyle runner influenced by Nike’s running heritage.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/059/708/278/original/804801_00.png.png",
-      "category": brandsID[1]._id,
-      "price": 150,
-      "quantity": 25
-    },
-    {
       "name": "Adidas Superstar",
       "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/015/761/525/original/CM8074.png.png",
@@ -284,6 +172,119 @@ db.once('open', async () => {
       "quantity": 25
     },
     {
+      "name": "Nike Air Force 1",
+      "description": "The Nike Air Force 1 ‘07 Premium ‘Halloween’ gets in the seasonal spirit with a premium black leather upper partially covered in a tonal print made up of balefully staring eyes.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/717/431/original/831733_00.png.png",
+      "category": brandsID[1]._id,
+      "price": 133,
+      "quantity": 25
+    },
+    {
+      "name": "Blazer Mid '77",
+      "description": "The Nike Blazer Mid ‘77 Premium ‘Dark Chocolate’ gets a material makeover while maintaining the shoe’s vintage basketball DNA.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/139/440/original/DM7581_200.png.png",
+      "category": brandsID[1]._id,
+      "price": 110,
+      "quantity": 25
+    },
+    {
+      "name": "Nike Air Force 1",
+      "description": "The Nike Air Force 1 ‘07 Premium ‘Halloween’ gets in the seasonal spirit with a premium black leather upper partially covered in a tonal print made up of balefully staring eyes.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/717/431/original/831733_00.png.png",
+      "category": brandsID[1]._id,
+      "price": 133,
+      "quantity": 25
+    },
+    {
+      "name": "Nike LD",
+      "description": "The sacai x Undercover x Nike LDWaffle ‘Night Maroon Team Royal’ reunites the three partner brands on a sneaker collaboration updated with sharply contrasting hues.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/778/734/original/815543_00.png.png",
+      "category": brandsID[1]._id,
+      "price": 170,
+      "quantity": 25
+    },
+    {
+      "name": "Nike Air Force 1 '07",
+      "description": "Commemorating the league’s 75th anniversary, the NBA x Nike Air Force 1 ‘07 LV8 ‘Spurs’ showcases vibrant accents that nod to San Antonio’s signature colors during the early ‘90s.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/717/194/original/834787_00.png.png",
+      "category": brandsID[1]._id,
+      "price": 100,
+      "quantity": 25
+    },
+    {
+      "name": "Nike Air Force 1",
+      "description": "Launching as part of a special collection honoring the 75th anniversary of the NBA, the Nike Air Force 1 ‘07 LV8 ‘Lakers’ showcases the signature colors of the franchises’ early years in Minneapolis and Los Angeles.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/755/460/original/819765_00.png.png",
+      "category": brandsID[1]._id,
+      "price": 100,
+      "quantity": 25
+    },
+    {
+      "name": "Court Vision Low",
+      "description": "The Nike Court Vision Low ‘White Turquoise Blue’ channels the familiar aesthetic of ‘80s basketball shoes.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/139/437/original/DM1187_100.png.png",
+      "category": brandsID[1]._id,
+      "price": 65,
+      "quantity": 25
+    },
+    {
+      "name": "Blazer Court Mid",
+      "description": "Mid lifestyle shoes.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/495/284/original/DC8901_001.png.png",
+      "category": brandsID[1]._id,
+      "price": 115,
+      "quantity": 25
+    },
+    {
+      "name": "KD 14",
+      "description": "The Nike KD 14 ‘Pop Art’ highlights primary-colored accents on Kevin Durant’s fourteenth signature shoe.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/718/266/original/815474_00.png.png",
+      "category": brandsID[1]._id,
+      "price": 150,
+      "quantity": 25
+    },
+    {
+      "name": "Dunk High Fragment",
+      "description": "The Fragment Design x Nike Dunk High ‘Tokyo’ delivers a continuation of the partner brands’ original 2010 City Pack collaboration.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/285/802/original/814962_00.png.png",
+      "category": brandsID[1]._id,
+      "price": 170,
+      "quantity": 25
+    },
+    {
+      "name": "Nike Dunk Low",
+      "description": "Launching as the third installment in the LA retailer’s ‘Dunk vs AF-1’ series, this triple-black edition of the Nike Dunk Low features an eclectic mix of materials throughout the upper.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/557/463/original/804800_00.png.png",
+      "category": brandsID[1]._id,
+      "price": 120,
+      "quantity": 25
+    },
+    {
+      "name": "Nike Air Presto",
+      "description": "The Nike Air Presto ‘What The’ mashes together elements drawn from OG colorways of the running shoe that Nike launched in 2000 as a ‘T-shirt for your feet.’",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/210/401/original/808890_00.png.png",
+      "category": brandsID[1]._id,
+      "price": 130,
+      "quantity": 25
+    },
+    {
+      "name": "Nike 7 EP",
+      "description": "The Nike Kyrie 7 EP ‘1 World 1 People’ pairs a message of inclusivity with an especially vibrant color scheme.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/059/105/998/original/CQ9327_700.png.png",
+      "category": brandsID[1]._id,
+      "price": 130,
+      "quantity": 25
+    },
+    {
+      "name": "Air Max",
+      "description": "The Nike Air Max Pre-Day LX ‘Chlorophyll’ delivers a two-tone colorway of a lifestyle runner influenced by Nike’s running heritage.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/059/708/278/original/804801_00.png.png",
+      "category": brandsID[1]._id,
+      "price": 150,
+      "quantity": 25
+    },
+    
+    {
       "name": "Jordan 1 Retro",
       "description": "The Air Jordan 1 Retro High OG Patent ‘Bred’ treats the iconic colorway to a glossy makeover.",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/558/430/original/784379_00.png.png",
@@ -385,6 +386,135 @@ db.once('open', async () => {
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/058/946/368/original/786347_00.png.png",
       "category": brandsID[2]._id,
       "price": 170,
+      "quantity": 25
+    },
+    
+    {
+      "name": "BAPE x Authentic",
+      "description": "Shred with these timeless shoes.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/628/836/original/BAPE_AUTHENTIC.png.png",
+      "category": brandsID[3]._id,
+      "price": 100,
+      "quantity": 25
+    },
+    {
+      "name": "BAPE x Sk8-Hi",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/628/837/original/BAPE_SK8.png.png",
+      "category": brandsID[3]._id,
+      "price": 100,
+      "quantity": 25
+    },
+    {
+      "name": "Awake NY x Sk8-Hi",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/804/073/original/AWAKE_SK8_GRN.png.png",
+      "category": brandsID[3]._id,
+      "price": 90,
+      "quantity": 25
+    },
+    {
+      "name": "Nigel Cabourn x OG Authentic",
+      "description": "Releasing as part of a capsule collection with the British designer, the Nigel Cabourn x Vans OG Authentic LX ‘USN’ takes inspiration from US Naval deck plimsolls from the Second World War.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/321/403/original/VN0A4BV99RE.png.png",
+      "category": brandsID[3]._id,
+      "price": 119,
+      "quantity": 25
+    },
+    {
+      "name": "Vans Era Horror Pack",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/321/407/original/VN0A4U39ZPM.png.png",
+      "category": brandsID[3]._id,
+      "price": 65,
+      "quantity": 25
+    },
+    {
+      "name": "Vans Vault UA OG Authentic",
+      "description": "",
+      "image": "https://images.stockx.com/images/Vans-Vault-UA-OG-Authentic-LX-Aries-Weed-Leaf-Yellow.jpg?fit=fill&bg=FFFFFF&w=375&h=375&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1630640916",
+      "category": brandsID[3]._id,
+      "price": 40,
+      "quantity": 25
+    },
+    {
+      "name": "Vans Authentic Bedwin",
+      "description": "Conceived in partnership with the Tokyo-based fashion brand, the Bedwin & The Heartbreakers x Vans Authentic ‘Multi B’ is taken from the four-piece ‘Bandana Pack.’",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/700/218/original/VN0A4BV99R9.png.png",
+      "category": brandsID[3]._id,
+      "price": 110,
+      "quantity": 25
+    },
+    {
+      "name": "Patta x Old Skool",
+      "description": "Drawn from the ‘Mean Eyed Cats’ collection, the Patta x Vans Old Skool VLT LX ‘Silver Pink’ launched exclusively at the Amsterdam-based retailer.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/700/226/original/VN0A4BVF5XF.png.png",
+      "category": brandsID[3]._id,
+      "price": 120,
+      "quantity": 25
+    },
+    {
+      "name": "NEIGHBORHOOD x ComfyCush",
+      "description": "The NEIGHBORHOOD x Vans ComfyCush Era ‘The Filth and the Fury’ delivers a stealthy colorway of a low-top sneaker designed in collaboration with the influential Tokyo-based streetwear brand.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/572/757/original/VN0A5DYB5E61.png.png",
+      "category": brandsID[3]._id,
+      "price": 130,
+      "quantity": 25
+    },
+    {
+      "name": "Vans Skate Authentic",
+      "description": "The Palace x Vans Skate Authentic “Jeremy the Duck - Black” is one of three colorways of the low-top skate shoe designed by the London skate and streetwear brand and Vans.",
+      "image": "https://images.stockx.com/images/Vans-Skate-Authentic-Palace-Jeremy-the-Duck-Black-Product.jpg?fit=fill&bg=FFFFFF&w=375&h=375&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1626289848",
+      "category": brandsID[3]._id,
+      "price": 120,
+      "quantity": 25
+    },
+    {
+      "name": "Lowland High ComfyCush",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/298/692/original/VN0A5DY99QP.png.png",
+      "category": brandsID[3]._id,
+      "price": 100,
+      "quantity": 25
+    },
+    {
+      "name": "atmos x Authentic",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/059/570/783/original/VN0A5HZS3321.png.png",
+      "category": brandsID[3]._id,
+      "price": 60,
+      "quantity": 25
+    },
+    {
+      "name": "Supreme x Era",
+      "description": "Launching as part of the ‘Monogram S’ pack, the Supreme x Vans Era ‘Royal’ dresses the lace-up in a printed two-tone canvas upper.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/017/422/original/786358_00.png.png",
+      "category": brandsID[3]._id,
+      "price": 130,
+      "quantity": 25
+    },
+    {
+      "name": "Skate Grosso Mid",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/850/758/original/VN0A5FCGYG9.png.png",
+      "category": brandsID[3]._id,
+      "price": 70,
+      "quantity": 25
+    },
+    {
+      "name": "C2H4 x Old Skool",
+      "description": "Conceived in partnership with the LA-based fashion label, the C2H4 x Vans Old Skool ‘Relic Stone’ features a dark grey textile upper with tonal suede paneling at the toe and heel.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/055/757/269/original/VN0A5AO92YD.png.png",
+      "category": brandsID[3]._id,
+      "price": 68,
+      "quantity": 25
+    },
+    {
+      "name": "Vans Old Skool Boys of Summer",
+      "description": "",
+      "image": "https://images.stockx.com/images/Vans-Old-Skool-Boys-of-Summer.jpg?fit=fill&bg=FFFFFF&w=375&h=375&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1622153932",
+      "category": brandsID[3]._id,
+      "price": 80,
       "quantity": 25
     },
     {
@@ -531,134 +661,7 @@ db.once('open', async () => {
       "price": 75,
       "quantity": 25
     },
-    {
-      "name": "BAPE x Authentic",
-      "description": "Shred with these timeless shoes.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/628/836/original/BAPE_AUTHENTIC.png.png",
-      "category": brandsID[3]._id,
-      "price": 100,
-      "quantity": 25
-    },
-    {
-      "name": "BAPE x Sk8-Hi",
-      "description": "",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/628/837/original/BAPE_SK8.png.png",
-      "category": brandsID[3]._id,
-      "price": 100,
-      "quantity": 25
-    },
-    {
-      "name": "Awake NY x Sk8-Hi",
-      "description": "",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/804/073/original/AWAKE_SK8_GRN.png.png",
-      "category": brandsID[3]._id,
-      "price": 90,
-      "quantity": 25
-    },
-    {
-      "name": "Nigel Cabourn x OG Authentic",
-      "description": "Releasing as part of a capsule collection with the British designer, the Nigel Cabourn x Vans OG Authentic LX ‘USN’ takes inspiration from US Naval deck plimsolls from the Second World War.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/321/403/original/VN0A4BV99RE.png.png",
-      "category": brandsID[3]._id,
-      "price": 119,
-      "quantity": 25
-    },
-    {
-      "name": "Vans Era Horror Pack",
-      "description": "",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/321/407/original/VN0A4U39ZPM.png.png",
-      "category": brandsID[3]._id,
-      "price": 65,
-      "quantity": 25
-    },
-    {
-      "name": "Vans Vault UA OG Authentic",
-      "description": "",
-      "image": "https://images.stockx.com/images/Vans-Vault-UA-OG-Authentic-LX-Aries-Weed-Leaf-Yellow.jpg?fit=fill&bg=FFFFFF&w=375&h=375&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1630640916",
-      "category": brandsID[3]._id,
-      "price": 40,
-      "quantity": 25
-    },
-    {
-      "name": "Vans Authentic Bedwin",
-      "description": "Conceived in partnership with the Tokyo-based fashion brand, the Bedwin & The Heartbreakers x Vans Authentic ‘Multi B’ is taken from the four-piece ‘Bandana Pack.’",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/700/218/original/VN0A4BV99R9.png.png",
-      "category": brandsID[3]._id,
-      "price": 110,
-      "quantity": 25
-    },
-    {
-      "name": "Patta x Old Skool",
-      "description": "Drawn from the ‘Mean Eyed Cats’ collection, the Patta x Vans Old Skool VLT LX ‘Silver Pink’ launched exclusively at the Amsterdam-based retailer.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/700/226/original/VN0A4BVF5XF.png.png",
-      "category": brandsID[3]._id,
-      "price": 120,
-      "quantity": 25
-    },
-    {
-      "name": "NEIGHBORHOOD x ComfyCush",
-      "description": "The NEIGHBORHOOD x Vans ComfyCush Era ‘The Filth and the Fury’ delivers a stealthy colorway of a low-top sneaker designed in collaboration with the influential Tokyo-based streetwear brand.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/572/757/original/VN0A5DYB5E61.png.png",
-      "category": brandsID[3]._id,
-      "price": 130,
-      "quantity": 25
-    },
-    {
-      "name": "Vans Skate Authentic",
-      "description": "The Palace x Vans Skate Authentic “Jeremy the Duck - Black” is one of three colorways of the low-top skate shoe designed by the London skate and streetwear brand and Vans.",
-      "image": "https://images.stockx.com/images/Vans-Skate-Authentic-Palace-Jeremy-the-Duck-Black-Product.jpg?fit=fill&bg=FFFFFF&w=375&h=375&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1626289848",
-      "category": brandsID[3]._id,
-      "price": 120,
-      "quantity": 25
-    },
-    {
-      "name": "Lowland High ComfyCush",
-      "description": "",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/298/692/original/VN0A5DY99QP.png.png",
-      "category": brandsID[3]._id,
-      "price": 100,
-      "quantity": 25
-    },
-    {
-      "name": "atmos x Authentic",
-      "description": "",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/059/570/783/original/VN0A5HZS3321.png.png",
-      "category": brandsID[3]._id,
-      "price": 60,
-      "quantity": 25
-    },
-    {
-      "name": "Supreme x Era",
-      "description": "Launching as part of the ‘Monogram S’ pack, the Supreme x Vans Era ‘Royal’ dresses the lace-up in a printed two-tone canvas upper.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/057/017/422/original/786358_00.png.png",
-      "category": brandsID[3]._id,
-      "price": 130,
-      "quantity": 25
-    },
-    {
-      "name": "Skate Grosso Mid",
-      "description": "",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/850/758/original/VN0A5FCGYG9.png.png",
-      "category": brandsID[3]._id,
-      "price": 70,
-      "quantity": 25
-    },
-    {
-      "name": "C2H4 x Old Skool",
-      "description": "Conceived in partnership with the LA-based fashion label, the C2H4 x Vans Old Skool ‘Relic Stone’ features a dark grey textile upper with tonal suede paneling at the toe and heel.",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/055/757/269/original/VN0A5AO92YD.png.png",
-      "category": brandsID[3]._id,
-      "price": 68,
-      "quantity": 25
-    },
-    {
-      "name": "Vans Old Skool Boys of Summer",
-      "description": "",
-      "image": "https://images.stockx.com/images/Vans-Old-Skool-Boys-of-Summer.jpg?fit=fill&bg=FFFFFF&w=375&h=375&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1622153932",
-      "category": brandsID[3]._id,
-      "price": 80,
-      "quantity": 25
-    },
+    
     {
       "name": "Curry 2",
       "description": "Shoot your shot with these Curry 8's and it's sure to go in. The perfect shoes fit for a warrior",
