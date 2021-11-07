@@ -11,6 +11,7 @@ function ProductList() {
   const [state, dispatch] = useStoreContext();
   // num of pages = total / limit (round up)
   // offset = page * limit
+
   const [pagination, setPagination] = useState({
     page: 0,
     limit: 8,
