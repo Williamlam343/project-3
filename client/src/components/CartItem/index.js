@@ -2,10 +2,10 @@ import React from 'react';
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 import { Card, Icon, CardTitle, Button } from 'react-materialize';
-
+import { useStoreContext } from '../../utils/GlobalState';
 export default function CartItem({ item }) {
 
-
+  const [state, dispatch] = useStoreContext()
 
   const removeFromCart = item => {
     dispatch({
