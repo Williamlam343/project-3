@@ -1,7 +1,7 @@
 const db = require('./connection');
 const { User, Product, Category } = require('../models');
 
-const brands = require("./brands.json");
+// const brands = require("./brands.json");
 
 
 
@@ -283,7 +283,7 @@ db.once('open', async () => {
       "price": 150,
       "quantity": 25
     },
-    
+
     {
       "name": "Jordan 1 Retro",
       "description": "The Air Jordan 1 Retro High OG Patent ‘Bred’ treats the iconic colorway to a glossy makeover.",
@@ -388,7 +388,7 @@ db.once('open', async () => {
       "price": 170,
       "quantity": 25
     },
-    
+
     {
       "name": "BAPE x Authentic",
       "description": "Shred with these timeless shoes.",
@@ -725,6 +725,7 @@ db.once('open', async () => {
       "price": 60,
       "quantity": 25
     },
+
     {
       "name": "Curry 2",
       "description": "Shoot your shot with these Curry 8's and it's sure to go in. The perfect shoes fit for a warrior",
@@ -782,8 +783,8 @@ db.once('open', async () => {
       "price": 65,
       "quantity": 25
     }
+
   ]);
-  console.log(brandsID[0]._id)
 
   await User.create({
     "firstName": "Will",

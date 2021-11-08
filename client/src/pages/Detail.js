@@ -15,9 +15,8 @@ import { idbPromise } from '../utils/helpers';
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
-  console.log(id)
   const [currentProduct, setCurrentProduct] = useState({});
-
+  const [size, setSize] = useState("")
   const { loading, data } = useQuery(QUERY_PRODUCTS);
   const { products, cart } = state;
 
@@ -31,10 +30,10 @@ function Detail() {
     else if (data) {
       dispatch({
         type: UPDATE_PRODUCTS,
-        products: data.products,
+        products: data.products.items,
       });
 
-      data.products.forEach((product) => {
+      data.products.items.forEach((product) => {
         idbPromise('products', 'put', product);
       });
     }
@@ -48,6 +47,17 @@ function Detail() {
       });
     }
   }, [products, data, loading, dispatch, id]);
+
+
+  function inputHandler(size) {
+
+
+    let shoeSize = size.target.value
+
+    setSize(shoeSize)
+
+  }
+
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id);
@@ -70,16 +80,16 @@ function Detail() {
       idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
     }
 
-    console.log("successfully added to cart")
+    console.log(currentProduct)
   };
 
 
   return (
     <>
       {currentProduct && cart ? (
-        <div className="container md:mx-3 my-1">
+        <div className=" md:mx-3 my-1">
 
-          <Row>
+          <Row className="container">
             <Link className="block" to="/">← Back to Products</Link>
             <Col
               s={12}
@@ -100,10 +110,11 @@ function Detail() {
               <Card
                 style={{ width: "100%" }}
                 className="text-black flex flex-col justify-center z-depth-2 w-full right-0"
-                actions={[
-
-                  <Button onClick={addToCart} className="rounded red lighten-1">Add to Cart</Button>
-                ]}
+                actions={
+                  size ?
+                    <Button onClick={addToCart} className="rounded red lighten-1">Add to Cart</Button> :
+                    <Button onClick={addToCart} disabled className="rounded red lighten-1">Add to Cart</Button>
+                }
 
                 closeIcon={<Icon>close</Icon>}
                 revealIcon={<Icon>more_vert</Icon>}
@@ -117,7 +128,7 @@ function Detail() {
                     className=" grey-text text-darken-3"
                     id="Select-40"
                     multiple={false}
-                    onChange={function noRefCheck() { }}
+                    onChange={inputHandler}
                     options={{
                       classes: 'grey-text text-darken-3',
                       dropdownOptions: {
@@ -144,22 +155,22 @@ function Detail() {
                     </option>
                     <option
                       color="red"
-                      value="1">
+                      value="8">
                       8
                     </option>
-                    <option value="2">
+                    <option value="9">
                       9
                     </option>
-                    <option value="3">
+                    <option value="10">
                       10
                     </option>
-                    <option value="4">
+                    <option value="11">
                       11
                     </option>
-                    <option value="5">
+                    <option value="12">
                       12
                     </option>
-                    <option value="6">
+                    <option value="13">
                       13
                     </option>
                   </Select>
