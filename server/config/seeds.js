@@ -28,8 +28,8 @@ db.once('open', async () => {
       "quantity": 25
     },
     {
-      "name": "Superstar OT Tech",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "name": "OT Tech",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/702/524/original/GZ7634.png.png",
       "category": brandsID[0]._id,
       "price": 143,
@@ -37,7 +37,7 @@ db.once('open', async () => {
     },
     {
       "name": "Forum Mids",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/850/047/original/GY5790.png.png",
       "category": brandsID[0]._id,
       "price": 160,
@@ -45,7 +45,7 @@ db.once('open', async () => {
     },
     {
       "name": "Stan Smiths",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/388/779/original/H00326.png.png",
       "category": brandsID[0]._id,
       "price": 150,
@@ -61,7 +61,7 @@ db.once('open', async () => {
     },
     {
       "name": "White Green",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/056/406/original/FY5480.png.png",
       "category": brandsID[0]._id,
       "price": 105,
@@ -69,7 +69,7 @@ db.once('open', async () => {
     },
     {
       "name": "Daily 3.0",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/321/324/original/GV7352.png.png",
       "category": brandsID[0]._id,
       "price": 120,
@@ -77,7 +77,7 @@ db.once('open', async () => {
     },
     {
       "name": "Questar Flow",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/027/229/808/original/F36243.png.png",
       "category": brandsID[0]._id,
       "price": 55,
@@ -85,7 +85,7 @@ db.once('open', async () => {
     },
     {
       "name": "City Cup",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/020/935/769/original/DB3068.png.png",
       "category": brandsID[0]._id,
       "price": 80,
@@ -93,7 +93,7 @@ db.once('open', async () => {
     },
     {
       "name": "Powerlift.3",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/026/400/354/original/AQ3328.png.png",
       "category": brandsID[0]._id,
       "price": 113,
@@ -101,7 +101,7 @@ db.once('open', async () => {
     },
     {
       "name": "ZX 10000 C",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/056/155/586/original/765853_00.png.png",
       "category": brandsID[0]._id,
       "price": 124,
@@ -109,7 +109,7 @@ db.once('open', async () => {
     },
     {
       "name": "Adi Ease",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/030/547/650/original/G56346.png.png",
       "category": brandsID[0]._id,
       "price": 60,
@@ -117,7 +117,7 @@ db.once('open', async () => {
     },
     {
       "name": "UltraBoost 3",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/005/455/013/original/BB6059_S.png.png",
       "category": brandsID[0]._id,
       "price": 135,
@@ -125,7 +125,7 @@ db.once('open', async () => {
     },
     {
       "name": "PureBoost",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/013/169/837/original/CM8304.png.png",
       "category": brandsID[0]._id,
       "price": 75,
@@ -133,7 +133,7 @@ db.once('open', async () => {
     },
     {
       "name": "Forum 84",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/044/200/361/original/G55364.png.png",
       "category": brandsID[0]._id,
       "price": 100,
@@ -141,7 +141,7 @@ db.once('open', async () => {
     },
     {
       "name": "Supernova",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/012/751/606/original/BB3477.png.png",
       "category": brandsID[0]._id,
       "price": 130,
@@ -165,7 +165,7 @@ db.once('open', async () => {
     },
     {
       "name": "PureBoost ZG",
-      "description": "From basketball court, to the dancefloor. These lifestyle shoes are great for any occasion.",
+      "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/004/003/668/original/AQ2927.png.png",
       "category": brandsID[0]._id,
       "price": 130,
@@ -550,7 +550,7 @@ db.once('open', async () => {
       "quantity": 25
     },
     {
-      "name": "Chuck 70 Midnight Hibiscus",
+      "name": "Chuck 70 Hibiscus",
       "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/733/960/original/172140C.png.png",
       "category": brandsID[4]._id,
@@ -582,7 +582,7 @@ db.once('open', async () => {
       "quantity": 25
     },
     {
-      "name": "Chuck Taylor All Star High",
+      "name": "All Star High",
       "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/253/308/original/169939F.png.png",
       "category": brandsID[4]._id,
@@ -590,7 +590,7 @@ db.once('open', async () => {
       "quantity": 25
     },
     {
-      "name": "Chuck Taylor All Star Low",
+      "name": "All Star Low",
       "description": "",
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/526/333/original/171267F.png.png",
       "category": brandsID[4]._id,
@@ -661,6 +661,70 @@ db.once('open', async () => {
       "price": 75,
       "quantity": 25
     },
+    {
+      "name": "HOVR Mega 2",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/016/679/original/3024479_103.png.png",
+      "category": brandsID[5]._id,
+      "price": 140,
+      "quantity": 25
+    },
+    {
+      "name": "Charged Vantage",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/061/804/046/original/3025258_001.png.png",
+      "category": brandsID[5]._id,
+      "price": 80,
+      "quantity": 25
+    },
+    {
+      "name": "Charged Pursuit 2",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/526/387/original/3025249_001.png.png",
+      "category": brandsID[5]._id,
+      "price": 70,
+      "quantity": 25
+    },
+    {
+      "name": "Project Rock 4",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/059/354/599/original/3023695_400.png.png",
+      "category": brandsID[5]._id,
+      "price": 150,
+      "quantity": 25
+    },
+    {
+      "name": "TriBase Reign 3",
+      "description": "The Under Armour TriBase Reign 3 ‘Black Turquoise’ delivers a simplistic two-tone colorway of a performance cross-training shoe built low to the ground for greater stability and feel.",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/054/815/017/original/3023698_002.png.png",
+      "category": brandsID[5]._id,
+      "price": 120,
+      "quantity": 25
+    },
+    {
+      "name": "Spieth 5 Spikeless",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/054/815/026/original/3024560_100.png.png",
+      "category": brandsID[5]._id,
+      "price": 200,
+      "quantity": 25
+    },
+    {
+      "name": "Flow Velociti Wind",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/052/131/345/original/3023545_301.png.png",
+      "category": brandsID[5]._id,
+      "price": 160,
+      "quantity": 25
+    },
+    {
+      "name": "Street Encounter 4",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/050/830/544/original/3022914_001.png.png",
+      "category": brandsID[5]._id,
+      "price": 60,
+      "quantity": 25
+    },
 
     {
       "name": "Curry 2",
@@ -668,6 +732,55 @@ db.once('open', async () => {
       "image": "https://image.goat.com/750/attachments/product_template_pictures/images/000/694/470/original/1259007_107%E2%80%8B.png",
       "category": brandsID[5]._id,
       "price": 150,
+      "quantity": 25
+    },
+    {
+      "name": "Project Rock Slide",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/062/016/669/original/3023762_600.png.png",
+      "category": brandsID[5]._id,
+      "price": 65,
+      "quantity": 25
+    },
+    
+    {
+      "name": "HOVR Sonic 3",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/049/425/503/original/3023934_001.png.png",
+      "category": brandsID[5]._id,
+      "price": 120,
+      "quantity": 25
+    },
+    {
+      "name": "Core Remix Slides",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/054/444/176/original/3024492_001.png.png",
+      "category": brandsID[5]._id,
+      "price": 45,
+      "quantity": 25
+    },
+    {
+      "name": "Charged Pursuit 2",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/060/526/391/original/3025249_600.png.png",
+      "category": brandsID[5]._id,
+      "price": 70,
+      "quantity": 25
+    },
+    {
+      "name": "Essential 'Black Photon Blue'",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/048/122/845/original/3022954_002.png.png",
+      "category": brandsID[5]._id,
+      "price": 65,
+      "quantity": 25
+    },
+    {
+      "name": "Essential 'Mod Grey'",
+      "description": "",
+      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/048/122/846/original/3022954_100.png.png",
+      "category": brandsID[5]._id,
+      "price": 65,
       "quantity": 25
     }
 
