@@ -23,7 +23,7 @@ const resolvers = {
 
       if (limit) {
         return {
-          items: await Product.find()
+          items: await Product.find(params)
             .populate("category")
             .limit(limit)
             .skip(offset),
@@ -32,7 +32,7 @@ const resolvers = {
       }
 
       return {
-        items: await Product.find().populate("category"),
+        items: await Product.find(params).populate("category"),
         total: await Product.count(),
       };
     },

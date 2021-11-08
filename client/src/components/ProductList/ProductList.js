@@ -6,7 +6,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_PRODUCTS } from "../../utils/queries";
 import ShoeCard from "../Card";
 import { Pagination, Row } from "react-materialize";
-
+import NoMatch from "../../pages/NoMatch";
 function ProductList() {
   const [state, dispatch] = useStoreContext();
   // num of pages = total / limit (round up)
@@ -17,12 +17,13 @@ function ProductList() {
     limit: 8,
     offset: 0,
   });
+
   const { category } = useParams();
 
   const { loading, data, refetch } = useQuery(QUERY_PRODUCTS, {
-    variables: { ...pagination },
+    variables: { ...pagination, category },
   });
-
+  // console.log(data.products.items[0].category.name)
   useEffect(() => {
     refetch({ ...pagination });
   }, [pagination.page]);
@@ -45,37 +46,29 @@ function ProductList() {
     });
   }
 
-  function filterProducts() {
-    if (!category) {
-      return state.products;
-    }
-
-    return state.products.filter(
-      (product) => product.category.name === category
-    );
-  }
-
   return (
     <>
       <div className="container my-2">
-        <h3>{category}</h3>
         {state.products.length ? (
-          <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-2 my-4">
-            {filterProducts().map((product) => (
-              <ShoeCard
-                key={product._id}
-                _id={product._id}
-                image={product.image}
-                name={product.name}
-                price={product.price}
-                quantity={product.quantity}
-                description={product.description}
-                category={product.category}
-              />
-            ))}
-          </div>
+          <>
+            <h3>{state.products[0].category.name}</h3>
+            <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-2 my-4">
+              {state.products.map((product) => (
+                <ShoeCard
+                  key={product._id}
+                  _id={product._id}
+                  image={product.image}
+                  name={product.name}
+                  price={product.price}
+                  quantity={product.quantity}
+                  description={product.description}
+                  category={product.category}
+                />
+              ))}
+            </div>
+          </>
         ) : (
-          <h3>You haven't added any products yet!</h3>
+          <NoMatch />
         )}
         {loading ? (
           <div>Loading...</div>
@@ -85,7 +78,9 @@ function ProductList() {
               onSelect={pageHandler}
               activePage={pagination.page + 1}
               className="white flex justify-center"
-              items={Math.ceil(data.products.total / pagination.limit)}
+              items={5
+                // Math.ceil(data.products.total / pagination.limit)
+              }
             />
           </Row>
         )}

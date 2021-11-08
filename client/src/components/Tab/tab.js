@@ -28,7 +28,7 @@ export default function HomeTab() {
                             responsiveThreshold: Infinity,
                         }}
                         title={
-                            <Link to={`/brands/${brand.name}`}>
+                            <Link to={`/brands/${brand._id}`}>
                                 <p className="grey-text text-darken-3">{brand.name}</p>
                             </Link>
                         }
