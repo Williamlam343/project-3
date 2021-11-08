@@ -283,7 +283,7 @@ db.once('open', async () => {
       "price": 150,
       "quantity": 25
     },
-    
+
     {
       "name": "Jordan 1 Retro",
       "description": "The Air Jordan 1 Retro High OG Patent ‘Bred’ treats the iconic colorway to a glossy makeover.",
@@ -388,7 +388,7 @@ db.once('open', async () => {
       "price": 170,
       "quantity": 25
     },
-    
+
     {
       "name": "BAPE x Authentic",
       "description": "Shred with these timeless shoes.",
@@ -661,47 +661,7 @@ db.once('open', async () => {
       "price": 75,
       "quantity": 25
     },
-    
-    {
-      "name": "Curry 2",
-      "description": "Shoot your shot with these Curry 8's and it's sure to go in. The perfect shoes fit for a warrior",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/000/694/470/original/1259007_107%E2%80%8B.png",
-      "category": brandsID[5]._id,
-      "price": 150,
-      "quantity": 25
-    },
-    {
-      "name": "Curry 2",
-      "description": "Shoot your shot with these Curry 8's and it's sure to go in. The perfect shoes fit for a warrior",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/000/694/470/original/1259007_107%E2%80%8B.png",
-      "category": brandsID[5]._id,
-      "price": 150,
-      "quantity": 25
-    },
-    {
-      "name": "Curry 2",
-      "description": "Shoot your shot with these Curry 8's and it's sure to go in. The perfect shoes fit for a warrior",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/000/694/470/original/1259007_107%E2%80%8B.png",
-      "category": brandsID[5]._id,
-      "price": 150,
-      "quantity": 25
-    },
-    {
-      "name": "Curry 2",
-      "description": "Shoot your shot with these Curry 8's and it's sure to go in. The perfect shoes fit for a warrior",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/000/694/470/original/1259007_107%E2%80%8B.png",
-      "category": brandsID[5]._id,
-      "price": 150,
-      "quantity": 25
-    },
-    {
-      "name": "Curry 2",
-      "description": "Shoot your shot with these Curry 8's and it's sure to go in. The perfect shoes fit for a warrior",
-      "image": "https://image.goat.com/750/attachments/product_template_pictures/images/000/694/470/original/1259007_107%E2%80%8B.png",
-      "category": brandsID[5]._id,
-      "price": 150,
-      "quantity": 25
-    },
+
     {
       "name": "Curry 2",
       "description": "Shoot your shot with these Curry 8's and it's sure to go in. The perfect shoes fit for a warrior",
@@ -710,8 +670,8 @@ db.once('open', async () => {
       "price": 150,
       "quantity": 25
     }
+
   ]);
-  console.log(brandsID[0]._id)
 
   await User.create({
     "firstName": "Will",
