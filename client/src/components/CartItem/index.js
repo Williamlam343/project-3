@@ -1,12 +1,11 @@
 import React from 'react';
-import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 import { Card, Icon, CardTitle, Button } from 'react-materialize';
 
 export default function CartItem({ item }) {
 
-  const [, dispatch] = useStoreContext();
+
 
   const removeFromCart = item => {
     dispatch({
@@ -56,7 +55,6 @@ export default function CartItem({ item }) {
       <h5>{item.name}</h5>
       <p>{item.description}</p>
       <h4>{`$${item.price}`}</h4>
-      <p>Size:12</p>
       <input
         type="number"
         placeholder="1"
