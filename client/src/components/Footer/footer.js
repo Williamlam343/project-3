@@ -10,7 +10,7 @@ export default function HomeFooter() {
 
             links={
                 <ul >
-                    <li><a className="grey-text text-darken-3" href="#!">GitHub</a></li>
+                    <li><a className="grey-text text-darken-3" href="https://github.com/Williamlam343/project-3" target="_blank">GitHub</a></li>
                 </ul>
             }
 

@@ -47,10 +47,8 @@ function Login() {
           />
         </div>
         <div className="">
-          {/* <label htmlFor="pwd">Password:</label> */}
           <TextInput
             label="Password"
-            password
             name="password"
             type="password"
             id="pwd"
