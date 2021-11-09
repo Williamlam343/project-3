@@ -30,11 +30,14 @@ function Success() {
   }, [addOrder]);
 
   return (
-    <div>
+    <div className=" min-h-screen">
 
-      <h4>Success!</h4>
-      <h5>Thank you for your purchase!</h5>
-      <h5>You will now be redirected to the home page</h5>
+      <div className="flex flex-col justify-center container">
+        <p className="text-3xl">Success!</p>
+        <p className="text-xl">Thank you for your purchase!</p>
+        <p className="text-xl">You will now be redirected to the home page</p>
+
+      </div>
 
     </div>
   );

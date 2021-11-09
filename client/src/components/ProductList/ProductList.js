@@ -51,7 +51,7 @@ function ProductList() {
       <div className="container my-2">
         {state.products.length ? (
           <>
-            <h3>{state.products[0].category.name}</h3>
+            {category && <h3>{state.products[0].category.name}</h3>}
             <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-2 my-4">
               {state.products.map((product) => (
                 <ShoeCard

@@ -5,7 +5,7 @@ import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 import { Button, TextInput } from "react-materialize"
 
-function Signup(props) {
+function Signup() {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
 
@@ -41,21 +41,23 @@ function Signup(props) {
 
         <div>
           <TextInput
+            placeholder="First"
+            name="firstName"
             id="firstName"
-            label="First Name"
+            onChange={handleChange}
           />
         </div>
         <div>
           <TextInput
-            label="Last Name"
-
-
+            placeholder="Last"
+            name="lastName"
             id="lastName"
             onChange={handleChange}
           />
         </div>
         <div >
           <TextInput
+            htmlFor="email"
             label="Email"
             name="email"
             type="email"
@@ -66,7 +68,6 @@ function Signup(props) {
         <div>
           <TextInput
             label="Password"
-            password
             name="password"
             type="password"
             id="pwd"
