@@ -28,7 +28,7 @@ export default function HomeFooter() {
                 </p>
                 <ul className="flex justify-center flex-col">
                     <li><a className="grey-text text-darken-4" href="https://www.linkedin.com/in/william-lam-115325218/" target="_blank"><img className="inline m-1" src={require("../../img/linkedin-dark.png").default} /><span className="py-2 px-0.5">William Lam</span></a></li>
-                    <li><a className="grey-text text-darken-4" href="#" target="_blank"><img className="inline m-1" src={require("../../img/linkedin-dark.png").default} /><span className="py-2 px-0.5">Henry Deserne</span></a></li>
+                    <li><a className="grey-text text-darken-4" href="https://www.linkedin.com/in/henry-deserne-1a721a226/" target="_blank"><img className="inline m-1" src={require("../../img/linkedin-dark.png").default} /><span className="py-2 px-0.5">Henry Deserne</span></a></li>
                     <li><a className="grey-text text-darken-4" href="https://www.linkedin.com/mwlite/in/john-price-056458225" target="_blank"><img className="inline m-1" src={require("../../img/linkedin-dark.png").default} /><span className="py-2 px-0.5">John Price</span></a></li>
                 </ul>
             </div>
